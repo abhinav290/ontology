@@ -1,0 +1,26 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" "base:Place" "base:GeoLocation" "base:Country" "base:City" "base:Attraction" "base:ActivityPlace" "base:Accomodation" ; /*classes style*/
+	"http://www.w3.org/2003/01/geo/wgs84_pos#location" -> "http://xmlns.com/foaf/0.1/based_near" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "6b8305dc:16e5869470f:-7ffa" [ label = "rdf:rest" ];
+	"NULL" -> "base:ActivityPlace" [ label = "rdf:first" ];
+	"NULL" -> "6b8305dc:16e5869470f:-7ffc" [ label = "owl:members" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "base:Attraction" [ label = "rdf:first" ];
+	"NULL" -> "6b8305dc:16e5869470f:-7ffb" [ label = "rdf:rest" ];
+	"NULL" -> "base:Accomodation" [ label = "rdf:first" ];
+	"base:Place" -> "xsd:anyURI" [ label = "base:url" ];
+	"http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" -> "owl:Thing" [ label = "http://www.w3.org/2003/01/geo/wgs84_pos#alt" ];
+	"base:Country" -> "base:City" [ label = "base:hasCity" ];
+	"base:Place" -> "base:GeoLocation" [ label = "http://www.w3.org/2003/01/geo/wgs84_pos#location" ];
+	"http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" -> "owl:Thing" [ label = "http://www.w3.org/2003/01/geo/wgs84_pos#lat" ];
+	"base:Place" -> "base:City" [ label = "base:inCity" ];
+	"http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" -> "owl:Thing" [ label = "http://www.w3.org/2003/01/geo/wgs84_pos#long" ];
+	"base:GeoLocation" -> "xsd:double" [ label = "base:longitude" ];
+	"base:GeoLocation" -> "xsd:double" [ label = "base:latitude" ];
+	"base:City" -> "base:Country" [ label = "base:inCountry" ];
+	"base:Place" -> "xsd:string" [ label = "base:name" ];
+	"base:Place" -> "rdfs:Literal" [ label = "base:telephone" ];
+
+}
