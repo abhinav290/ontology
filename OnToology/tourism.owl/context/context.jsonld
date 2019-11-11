@@ -1,0 +1,91 @@
+{
+  "@context" : {
+    "url" : {
+      "@id" : "http://example.org/tourism.owl#url",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Country" : {
+      "@id" : "http://example.org/tourism.owl#Country"
+    },
+    "Attraction" : {
+      "@id" : "http://example.org/tourism.owl#Attraction"
+    },
+    "long" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#long"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "longitude" : {
+      "@id" : "http://example.org/tourism.owl#longitude",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "GeoLocation" : {
+      "@id" : "http://example.org/tourism.owl#GeoLocation"
+    },
+    "based_near" : {
+      "@id" : "http://xmlns.com/foaf/0.1/based_near"
+    },
+    "latitude" : {
+      "@id" : "http://example.org/tourism.owl#latitude",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "name" : {
+      "@id" : "http://example.org/tourism.owl#name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "location" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#location",
+      "@type" : "@id"
+    },
+    "alt" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#alt"
+    },
+    "ActivityPlace" : {
+      "@id" : "http://example.org/tourism.owl#ActivityPlace"
+    },
+    "inCountry" : {
+      "@id" : "http://example.org/tourism.owl#inCountry",
+      "@type" : "@id"
+    },
+    "telephone" : {
+      "@id" : "http://example.org/tourism.owl#telephone",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Place" : {
+      "@id" : "http://example.org/tourism.owl#Place"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "hasCity" : {
+      "@id" : "http://example.org/tourism.owl#hasCity",
+      "@type" : "@id"
+    },
+    "lat" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+    },
+    "Accomodation" : {
+      "@id" : "http://example.org/tourism.owl#Accomodation"
+    },
+    "inCity" : {
+      "@id" : "http://example.org/tourism.owl#inCity",
+      "@type" : "@id"
+    },
+    "date" : {
+      "@id" : "http://purl.org/dc/elements/1.1/date"
+    },
+    "City" : {
+      "@id" : "http://example.org/tourism.owl#City"
+    },
+    "SpatialThing" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    }
+  }
+}
