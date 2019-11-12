@@ -19,13 +19,28 @@ This section provides details for each class and property defined by [Ontology N
          </a>
       </li>
       <li>
+         <a href="#FinishPoint" title="http://example.org/tourism.owl#FinishPoint">
+            <span>finish point</span>
+         </a>
+      </li>
+      <li>
          <a href="#GeoLocation" title="http://example.org/tourism.owl#GeoLocation">
             <span>geo location</span>
          </a>
       </li>
       <li>
+         <a href="#Point" title="http://example.org/tourism.owl#Point">
+            <span>point</span>
+         </a>
+      </li>
+      <li>
          <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
             title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">SpatialThing</a>
+      </li>
+      <li>
+         <a href="#StartPoint" title="http://example.org/tourism.owl#StartPoint">
+            <span>start point</span>
+         </a>
       </li>
    </ul>
    <div class="entity" id="Accomodation">
@@ -91,6 +106,26 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
       </dl>
    </div>
+   <div class="entity" id="FinishPoint">
+      <h3>finish point<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/tourism.owl#FinishPoint</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Point" title="http://example.org/tourism.owl#Point">point</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#finishPoint" title="http://example.org/tourism.owl#finishPoint">finish point</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="GeoLocation">
       <h3>geo location<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -105,6 +140,11 @@ This section provides details for each class and property defined by [Ontology N
                title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">SpatialThing</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Point" title="http://example.org/tourism.owl#Point">point</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#latitude" title="http://example.org/tourism.owl#latitude">latitude</a>
@@ -115,6 +155,34 @@ This section provides details for each class and property defined by [Ontology N
          <dd>
             <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#location" title="http://www.w3.org/2003/01/geo/wgs84_pos#location">location</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Point">
+      <h3>point<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/tourism.owl#Point</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#GeoLocation" title="http://example.org/tourism.owl#GeoLocation">geo location</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#FinishPoint" title="http://example.org/tourism.owl#FinishPoint">finish point</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#StartPoint" title="http://example.org/tourism.owl#StartPoint">start point</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#gridReference" title="http://example.org/tourism.owl#gridReference">grid reference</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#nearestTown" title="http://example.org/tourism.owl#nearestTown">nearest town</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#pointName" title="http://example.org/tourism.owl#pointName">point name</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
    </div>
@@ -147,9 +215,34 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
       </dl>
    </div>
+   <div class="entity" id="StartPoint">
+      <h3>start point<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/tourism.owl#StartPoint</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Point" title="http://example.org/tourism.owl#Point">point</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#startPoint" title="http://example.org/tourism.owl#startPoint">start point</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
 </div><div id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
+      <li>
+         <a href="#finishPoint" title="http://example.org/tourism.owl#finishPoint">
+            <span>finish point</span>
+         </a>
+      </li>
       <li>
          <a href="#hasCity" title="http://example.org/tourism.owl#hasCity">hasCity</a>
       </li>
@@ -168,7 +261,48 @@ This section provides details for each class and property defined by [Ontology N
             <span>location</span>
          </a>
       </li>
+      <li>
+         <a href="#startPoint" title="http://example.org/tourism.owl#startPoint">
+            <span>start point</span>
+         </a>
+      </li>
+      <li>
+         <a href="#trailCity" title="http://example.org/tourism.owl#trailCity">
+            <span>trail city</span>
+         </a>
+      </li>
+      <li>
+         <a href="#trailMetrics" title="http://example.org/tourism.owl#trailMetrics">
+            <span>trail metrics</span>
+         </a>
+      </li>
    </ul>
+   <div class="entity" id="finishPoint">
+      <h3>finish point<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/tourism.owl#finishPoint</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://example.org/tourism.owl#Trail">trail</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#FinishPoint" title="http://example.org/tourism.owl#FinishPoint">finish point</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasCity">
       <h3>hasCity<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -263,12 +397,103 @@ This section provides details for each class and property defined by [Ontology N
          </dl>
       </div>
    </div>
+   <div class="entity" id="startPoint">
+      <h3>start point<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/tourism.owl#startPoint</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://example.org/tourism.owl#Trail">trail</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#StartPoint" title="http://example.org/tourism.owl#StartPoint">start point</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="trailCity">
+      <h3>trail city<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/tourism.owl#trailCity</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://example.org/tourism.owl#Trail">trail</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://example.org/tourism.owl#City">city</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="trailMetrics">
+      <h3>trail metrics<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/tourism.owl#trailMetrics</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://example.org/tourism.owl#Trail">trail</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://example.org/tourism.owl#Metrics">metrics</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
 </div><div id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
+         <a href="#climb" title="http://example.org/tourism.owl#climb">
+            <span>climb</span>
+         </a>
+      </li>
+      <li>
+         <a href="#expectedTime" title="http://example.org/tourism.owl#expectedTime">
+            <span>expected time</span>
+         </a>
+      </li>
+      <li>
+         <a href="#grade" title="http://example.org/tourism.owl#grade">
+            <span>grade</span>
+         </a>
+      </li>
+      <li>
+         <a href="#gridReference" title="http://example.org/tourism.owl#gridReference">
+            <span>grid reference</span>
+         </a>
+      </li>
+      <li>
          <a href="#latitude" title="http://example.org/tourism.owl#latitude">
             <span>latitude</span>
+         </a>
+      </li>
+      <li>
+         <a href="#length" title="http://example.org/tourism.owl#length">
+            <span>length</span>
          </a>
       </li>
       <li>
@@ -282,8 +507,38 @@ This section provides details for each class and property defined by [Ontology N
          </a>
       </li>
       <li>
+         <a href="#nearestTown" title="http://example.org/tourism.owl#nearestTown">
+            <span>nearest town</span>
+         </a>
+      </li>
+      <li>
+         <a href="#pointName" title="http://example.org/tourism.owl#pointName">
+            <span>point name</span>
+         </a>
+      </li>
+      <li>
          <a href="#telephone" title="http://example.org/tourism.owl#telephone">
             <span>telephone</span>
+         </a>
+      </li>
+      <li>
+         <a href="#trailFormat" title="http://example.org/tourism.owl#trailFormat">
+            <span>trail format</span>
+         </a>
+      </li>
+      <li>
+         <a href="#trailName" title="http://example.org/tourism.owl#trailName">
+            <span>trail name</span>
+         </a>
+      </li>
+      <li>
+         <a href="#trailOrganization" title="http://example.org/tourism.owl#trailOrganization">
+            <span>trail organization</span>
+         </a>
+      </li>
+      <li>
+         <a href="#trailType" title="http://example.org/tourism.owl#trailType">
+            <span>trail type</span>
          </a>
       </li>
       <li>
@@ -292,6 +547,90 @@ This section provides details for each class and property defined by [Ontology N
          </a>
       </li>
    </ul>
+   <div class="entity" id="climb">
+      <h3>climb<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/tourism.owl#climb</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://example.org/tourism.owl#Metrics">metrics</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="expectedTime">
+      <h3>expected time<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/tourism.owl#expectedTime</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://example.org/tourism.owl#Metrics">metrics</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#int">int</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="grade">
+      <h3>grade<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/tourism.owl#grade</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://example.org/tourism.owl#Metrics">metrics</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="gridReference">
+      <h3>grid reference<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/tourism.owl#gridReference</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Point" title="http://example.org/tourism.owl#Point">point</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="latitude">
       <h3>latitude<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -309,6 +648,27 @@ This section provides details for each class and property defined by [Ontology N
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="length">
+      <h3>length<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/tourism.owl#length</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://example.org/tourism.owl#Metrics">metrics</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
             </dd>
          </dl>
       </div>
@@ -355,6 +715,48 @@ This section provides details for each class and property defined by [Ontology N
          </dl>
       </div>
    </div>
+   <div class="entity" id="nearestTown">
+      <h3>nearest town<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/tourism.owl#nearestTown</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Point" title="http://example.org/tourism.owl#Point">point</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="pointName">
+      <h3>point name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/tourism.owl#pointName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Point" title="http://example.org/tourism.owl#Point">point</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="telephone">
       <h3>telephone<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -372,6 +774,90 @@ This section provides details for each class and property defined by [Ontology N
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="trailFormat">
+      <h3>trail format<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/tourism.owl#trailFormat</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://example.org/tourism.owl#Trail">trail</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="trailName">
+      <h3>trail name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/tourism.owl#trailName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://example.org/tourism.owl#Trail">trail</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="trailOrganization">
+      <h3>trail organization<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/tourism.owl#trailOrganization</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://example.org/tourism.owl#Trail">trail</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="trailType">
+      <h3>trail type<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/tourism.owl#trailType</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://example.org/tourism.owl#Trail">trail</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
             </dd>
          </dl>
       </div>

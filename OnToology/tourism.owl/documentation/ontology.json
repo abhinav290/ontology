@@ -38,14 +38,86 @@
   "@id" : "http://example.org/tourism.owl#Country",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
+  "@id" : "http://example.org/tourism.owl#FinishPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/tourism.owl#Point"
+  } ]
+}, {
   "@id" : "http://example.org/tourism.owl#GeoLocation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
   } ]
 }, {
+  "@id" : "http://example.org/tourism.owl#Metrics",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://example.org/tourism.owl#Place",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://example.org/tourism.owl#Point",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/tourism.owl#GeoLocation"
+  } ]
+}, {
+  "@id" : "http://example.org/tourism.owl#StartPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/tourism.owl#Point"
+  } ]
+}, {
+  "@id" : "http://example.org/tourism.owl#Trail",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://example.org/tourism.owl#climb",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/tourism.owl#Metrics"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/tourism.owl#expectedTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/tourism.owl#Metrics"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "http://example.org/tourism.owl#finishPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/tourism.owl#Trail"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/tourism.owl#FinishPoint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://example.org/tourism.owl#grade",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/tourism.owl#Metrics"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/tourism.owl#gridReference",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/tourism.owl#Point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
 }, {
   "@id" : "http://example.org/tourism.owl#hasCity",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
@@ -89,6 +161,15 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#double"
   } ]
 }, {
+  "@id" : "http://example.org/tourism.owl#length",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/tourism.owl#Metrics"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
   "@id" : "http://example.org/tourism.owl#longitude",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -107,6 +188,33 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "http://example.org/tourism.owl#nearestTown",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/tourism.owl#Point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/tourism.owl#pointName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/tourism.owl#Point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/tourism.owl#startPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/tourism.owl#Trail"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/tourism.owl#StartPoint"
+  } ]
+}, {
   "@id" : "http://example.org/tourism.owl#telephone",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -114,6 +222,60 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "http://example.org/tourism.owl#trailCity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/tourism.owl#Trail"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/tourism.owl#City"
+  } ]
+}, {
+  "@id" : "http://example.org/tourism.owl#trailFormat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/tourism.owl#Trail"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/tourism.owl#trailMetrics",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/tourism.owl#Trail"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/tourism.owl#Metrics"
+  } ]
+}, {
+  "@id" : "http://example.org/tourism.owl#trailName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/tourism.owl#Trail"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/tourism.owl#trailOrganization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/tourism.owl#Trail"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/tourism.owl#trailType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/tourism.owl#Trail"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://example.org/tourism.owl#url",
@@ -139,13 +301,13 @@
     "@value" : "$Date: 2009/04/20 15:00:30 $"
   } ],
   "http://purl.org/dc/elements/1.1/description" : [ {
-    "@value" : "A vocabulary for representing latitude, longitude and \n altitude information in the WGS84 geodetic reference datum. \n Version $Id: wgs84_pos.rdf,v 1.22 2009/04/20 15:00:30 timbl Exp $. See http://www.w3.org/2003/01/geo/ for more details."
+    "@value" : "A vocabulary for representing latitude, longitude and \r\n altitude information in the WGS84 geodetic reference datum. \r\n Version $Id: wgs84_pos.rdf,v 1.22 2009/04/20 15:00:30 timbl Exp $. See http://www.w3.org/2003/01/geo/ for more details."
   } ],
   "http://purl.org/dc/elements/1.1/title" : [ {
     "@value" : "WGS84 Geo Positioning: an RDF vocabulary"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "\nRecent changes to this namespace:\n$Log: wgs84_pos.rdf,v $\nRevision 1.22  2009/04/20 15:00:30  timbl\nRemove the time bits which have been deal with elsewhere eg in iCal.\n\nRevision 1.21  2009/04/20 12:52:47  timbl\ntry again\n\nRevision 1.20  2009/04/20 12:42:11  timbl\nAdd Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)\n\nRevision 1.19  2009/04/20 12:36:31  timbl\nAdd Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)\n\nRevision 1.18  2006/02/01 22:01:04  danbri\nClarified that lat and long are decimal degrees, and that alt is decimal metres about local reference ellipsoid\n\nRevision 1.17  2004/02/06 17:38:12  danbri\nFixed a bad commit screwup\n\nRevision 1.15  2003/04/19 11:24:08  danbri\nFixed the typo even more.\n\nRevision 1.14  2003/04/19 11:16:56  danbri\nfixed a typo\n\nRevision 1.13  2003/02/19 22:27:27  connolly\nrelaxed domain constraints on lat/long/alt from Point to SpatialThing\n\nRevision 1.12  2003/01/12 01:41:41  danbri\nTrying local copy of XSLT doc.\n\nRevision 1.11  2003/01/12 01:20:18  danbri\nadded a link to morten's xslt rdfs viewer.\n\nRevision 1.10  2003/01/11 18:56:49  danbri\nRemoved datatype range from lat and long properties, since they would\nhave required each occurance of the property to mention the datatype.\n\nRevision 1.9  2003/01/11 11:41:31  danbri\nAnother typo; repaired rdfs:Property to rdf:Property x4\n\nRevision 1.8  2003/01/11 11:05:02  danbri\nAdded an rdfs:range for each lat/long/alt property,\nhttp://www.w3.org/2001/XMLSchema#float\n\nRevision 1.7  2003/01/10 20:25:16  danbri\nLonger rdfs:comment for Point, trying to be Earth-centric and neutral about\ncoordinate system(s) at the same time. Feedback welcomed.\n\nRevision 1.6  2003/01/10 20:18:30  danbri\nAdded CVS log comments into the RDF/XML as an rdfs:comment property of the\nvocabulary. Note that this is not common practice (but seems both harmless\nand potentially useful).\n\n\nrevision 1.5\ndate: 2003/01/10 20:14:31;  author: danbri;  state: Exp;  lines: +16 -5\nUpdated schema:\nAdded a dc:date, added url for more info. Changed the rdfs:label of the\nnamespace from gp to geo. Added a class Point, set as the rdfs:domain of\neach property. Added XML comment on the lat_long property suggesting that\nwe might not need it (based on #rdfig commentary from implementors).\n\nrevision 1.4\ndate: 2003/01/10 20:01:07;  author: danbri;  state: Exp;  lines: +6 -5\nFixed typo; several rdfs:about attributes are now rdf:about. Thanks to MortenF in\n#rdfig for catching this error.\n\nrevision 1.3\ndate: 2003/01/10 11:59:03;  author: danbri;  state: Exp;  lines: +4 -3\nfixed buglet in vocab, added more wgs links\n\nrevision 1.2\ndate: 2003/01/10 11:01:11;  author: danbri;  state: Exp;  lines: +4 -4\nRemoved alt from the as-a-flat-string property, and switched from\nspace separated to comma separated.\n\nrevision 1.1\ndate: 2003/01/10 10:53:23;  author: danbri;  state: Exp;\nbasic geo vocab\n\n"
+    "@value" : "\r\nRecent changes to this namespace:\r\n$Log: wgs84_pos.rdf,v $\r\nRevision 1.22  2009/04/20 15:00:30  timbl\r\nRemove the time bits which have been deal with elsewhere eg in iCal.\r\n\r\nRevision 1.21  2009/04/20 12:52:47  timbl\r\ntry again\r\n\r\nRevision 1.20  2009/04/20 12:42:11  timbl\r\nAdd Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)\r\n\r\nRevision 1.19  2009/04/20 12:36:31  timbl\r\nAdd Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)\r\n\r\nRevision 1.18  2006/02/01 22:01:04  danbri\r\nClarified that lat and long are decimal degrees, and that alt is decimal metres about local reference ellipsoid\r\n\r\nRevision 1.17  2004/02/06 17:38:12  danbri\r\nFixed a bad commit screwup\r\n\r\nRevision 1.15  2003/04/19 11:24:08  danbri\r\nFixed the typo even more.\r\n\r\nRevision 1.14  2003/04/19 11:16:56  danbri\r\nfixed a typo\r\n\r\nRevision 1.13  2003/02/19 22:27:27  connolly\r\nrelaxed domain constraints on lat/long/alt from Point to SpatialThing\r\n\r\nRevision 1.12  2003/01/12 01:41:41  danbri\r\nTrying local copy of XSLT doc.\r\n\r\nRevision 1.11  2003/01/12 01:20:18  danbri\r\nadded a link to morten's xslt rdfs viewer.\r\n\r\nRevision 1.10  2003/01/11 18:56:49  danbri\r\nRemoved datatype range from lat and long properties, since they would\r\nhave required each occurance of the property to mention the datatype.\r\n\r\nRevision 1.9  2003/01/11 11:41:31  danbri\r\nAnother typo; repaired rdfs:Property to rdf:Property x4\r\n\r\nRevision 1.8  2003/01/11 11:05:02  danbri\r\nAdded an rdfs:range for each lat/long/alt property,\r\nhttp://www.w3.org/2001/XMLSchema#float\r\n\r\nRevision 1.7  2003/01/10 20:25:16  danbri\r\nLonger rdfs:comment for Point, trying to be Earth-centric and neutral about\r\ncoordinate system(s) at the same time. Feedback welcomed.\r\n\r\nRevision 1.6  2003/01/10 20:18:30  danbri\r\nAdded CVS log comments into the RDF/XML as an rdfs:comment property of the\r\nvocabulary. Note that this is not common practice (but seems both harmless\r\nand potentially useful).\r\n\r\n\r\nrevision 1.5\r\ndate: 2003/01/10 20:14:31;  author: danbri;  state: Exp;  lines: +16 -5\r\nUpdated schema:\r\nAdded a dc:date, added url for more info. Changed the rdfs:label of the\r\nnamespace from gp to geo. Added a class Point, set as the rdfs:domain of\r\neach property. Added XML comment on the lat_long property suggesting that\r\nwe might not need it (based on #rdfig commentary from implementors).\r\n\r\nrevision 1.4\r\ndate: 2003/01/10 20:01:07;  author: danbri;  state: Exp;  lines: +6 -5\r\nFixed typo; several rdfs:about attributes are now rdf:about. Thanks to MortenF in\r\n#rdfig for catching this error.\r\n\r\nrevision 1.3\r\ndate: 2003/01/10 11:59:03;  author: danbri;  state: Exp;  lines: +4 -3\r\nfixed buglet in vocab, added more wgs links\r\n\r\nrevision 1.2\r\ndate: 2003/01/10 11:01:11;  author: danbri;  state: Exp;  lines: +4 -4\r\nRemoved alt from the as-a-flat-string property, and switched from\r\nspace separated to comma separated.\r\n\r\nrevision 1.1\r\ndate: 2003/01/10 10:53:23;  author: danbri;  state: Exp;\r\nbasic geo vocab\r\n\r\n"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "geo"
@@ -154,7 +316,7 @@
   "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Anything with spatial extent, i.e. size, shape, or position.\n e.g. people, places, bowling balls, as well as abstract areas like cubes.\n"
+    "@value" : "Anything with spatial extent, i.e. size, shape, or position.\r\n e.g. people, places, bowling balls, as well as abstract areas like cubes.\r\n"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "SpatialThing"
@@ -163,7 +325,7 @@
   "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#alt",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The WGS84 altitude of a SpatialThing (decimal meters \nabove the local reference ellipsoid)."
+    "@value" : "The WGS84 altitude of a SpatialThing (decimal meters \r\nabove the local reference ellipsoid)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
@@ -195,7 +357,7 @@
   "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#location",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The relation between something and the point, \n or other geometrical thing in space, where it is.  For example, the realtionship between\n a radio tower and a Point with a given lat and long.\n Or a relationship between a park and its outline as a closed arc of points, or a road and\n its location as a arc (a sequence of points).\n Clearly in practice there will be limit to the accuracy of any such statement, but one would expect\n an accuracy appropriate for the size of the object and uses such as mapping .\n "
+    "@value" : "The relation between something and the point, \r\n or other geometrical thing in space, where it is.  For example, the realtionship between\r\n a radio tower and a Point with a given lat and long.\r\n Or a relationship between a park and its outline as a closed arc of points, or a road and\r\n its location as a arc (a sequence of points).\r\n Clearly in practice there will be limit to the accuracy of any such statement, but one would expect\r\n an accuracy appropriate for the size of the object and uses such as mapping .\r\n "
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://example.org/tourism.owl#Place"
