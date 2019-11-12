@@ -1,26 +1,42 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" "base:Place" "base:GeoLocation" "base:Country" "base:City" "base:Attraction" "base:ActivityPlace" "base:Accomodation" ; /*classes style*/
-	"http://www.w3.org/2003/01/geo/wgs84_pos#location" -> "http://xmlns.com/foaf/0.1/based_near" [ label = "rdfs:subPropertyOf" ];
-	"NULL" -> "6b8305dc:16e5869470f:-7ffa" [ label = "rdf:rest" ];
-	"NULL" -> "base:ActivityPlace" [ label = "rdf:first" ];
-	"NULL" -> "6b8305dc:16e5869470f:-7ffc" [ label = "owl:members" ];
+node [shape = rectangle, color="orange"]; "base:City" "base:FinishPoint" "base:Country" "base:Attraction" "base:Accomodation" "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" "base:Metrics" "base:Point" "base:StartPoint" "base:Place" "base:Trail" "base:ActivityPlace" "base:GeoLocation" ; /*classes style*/
+	"NULL" -> "3405a8c3:16e5d847e3b:-7ffc" [ label = "owl:members" ];
 	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
 	"NULL" -> "base:Attraction" [ label = "rdf:first" ];
-	"NULL" -> "6b8305dc:16e5869470f:-7ffb" [ label = "rdf:rest" ];
+	"NULL" -> "3405a8c3:16e5d847e3b:-7ffa" [ label = "rdf:rest" ];
+	"NULL" -> "base:ActivityPlace" [ label = "rdf:first" ];
+	"NULL" -> "3405a8c3:16e5d847e3b:-7ffb" [ label = "rdf:rest" ];
 	"NULL" -> "base:Accomodation" [ label = "rdf:first" ];
-	"base:Place" -> "xsd:anyURI" [ label = "base:url" ];
-	"http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" -> "owl:Thing" [ label = "http://www.w3.org/2003/01/geo/wgs84_pos#alt" ];
-	"base:Country" -> "base:City" [ label = "base:hasCity" ];
-	"base:Place" -> "base:GeoLocation" [ label = "http://www.w3.org/2003/01/geo/wgs84_pos#location" ];
-	"http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" -> "owl:Thing" [ label = "http://www.w3.org/2003/01/geo/wgs84_pos#lat" ];
+	"base:finishPoint" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"http://www.w3.org/2003/01/geo/wgs84_pos#location" -> "http://xmlns.com/foaf/0.1/based_near" [ label = "rdfs:subPropertyOf" ];
+	"base:Metrics" -> "xsd:float" [ label = "base:length" ];
+	"base:Trail" -> "xsd:string" [ label = "base:trailName" ];
+	"base:Metrics" -> "xsd:string" [ label = "base:grade" ];
+	"base:Trail" -> "xsd:string" [ label = "base:trailOrganization" ];
 	"base:Place" -> "base:City" [ label = "base:inCity" ];
 	"http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" -> "owl:Thing" [ label = "http://www.w3.org/2003/01/geo/wgs84_pos#long" ];
-	"base:GeoLocation" -> "xsd:double" [ label = "base:longitude" ];
-	"base:GeoLocation" -> "xsd:double" [ label = "base:latitude" ];
-	"base:City" -> "base:Country" [ label = "base:inCountry" ];
-	"base:Place" -> "xsd:string" [ label = "base:name" ];
 	"base:Place" -> "rdfs:Literal" [ label = "base:telephone" ];
+	"base:Place" -> "xsd:anyURI" [ label = "base:url" ];
+	"http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" -> "owl:Thing" [ label = "http://www.w3.org/2003/01/geo/wgs84_pos#alt" ];
+	"base:Metrics" -> "xsd:string" [ label = "base:climb" ];
+	"base:Country" -> "base:City" [ label = "base:hasCity" ];
+	"base:Trail" -> "base:StartPoint" [ label = "base:startPoint" ];
+	"base:Place" -> "base:GeoLocation" [ label = "http://www.w3.org/2003/01/geo/wgs84_pos#location" ];
+	"http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" -> "owl:Thing" [ label = "http://www.w3.org/2003/01/geo/wgs84_pos#lat" ];
+	"base:Point" -> "xsd:string" [ label = "base:pointName" ];
+	"base:Trail" -> "base:FinishPoint" [ label = "base:finishPoint" ];
+	"base:Point" -> "xsd:string" [ label = "base:nearestTown" ];
+	"base:Point" -> "xsd:string" [ label = "base:gridReference" ];
+	"base:Metrics" -> "xsd:int" [ label = "base:expectedTime" ];
+	"base:Trail" -> "base:City" [ label = "base:trailCity" ];
+	"base:City" -> "base:Country" [ label = "base:inCountry" ];
+	"base:GeoLocation" -> "xsd:double" [ label = "base:latitude" ];
+	"base:Place" -> "xsd:string" [ label = "base:name" ];
+	"base:Trail" -> "xsd:string" [ label = "base:trailType" ];
+	"base:Trail" -> "xsd:string" [ label = "base:trailFormat" ];
+	"base:Trail" -> "base:Metrics" [ label = "base:trailMetrics" ];
+	"base:GeoLocation" -> "xsd:double" [ label = "base:longitude" ];
 
 }

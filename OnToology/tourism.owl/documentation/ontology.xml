@@ -110,6 +110,17 @@ above the local reference ellipsoid).</rdfs:comment>
     
 
 
+    <!-- http://example.org/tourism.owl#finishPoint -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/tourism.owl#finishPoint">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://example.org/tourism.owl#Trail"/>
+        <rdfs:range rdf:resource="http://example.org/tourism.owl#FinishPoint"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://example.org/tourism.owl#hasCity -->
 
 
@@ -144,6 +155,36 @@ above the local reference ellipsoid).</rdfs:comment>
     
 
 
+    <!-- http://example.org/tourism.owl#startPoint -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/tourism.owl#startPoint">
+        <rdfs:domain rdf:resource="http://example.org/tourism.owl#Trail"/>
+        <rdfs:range rdf:resource="http://example.org/tourism.owl#StartPoint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/tourism.owl#trailCity -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/tourism.owl#trailCity">
+        <rdfs:domain rdf:resource="http://example.org/tourism.owl#Trail"/>
+        <rdfs:range rdf:resource="http://example.org/tourism.owl#City"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/tourism.owl#trailMetrics -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/tourism.owl#trailMetrics">
+        <rdfs:domain rdf:resource="http://example.org/tourism.owl#Trail"/>
+        <rdfs:range rdf:resource="http://example.org/tourism.owl#Metrics"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.w3.org/2003/01/geo/wgs84_pos#location -->
 
 
@@ -165,12 +206,62 @@ above the local reference ellipsoid).</rdfs:comment>
     
 
 
+    <!-- http://example.org/tourism.owl#climb -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/tourism.owl#climb">
+        <rdfs:domain rdf:resource="http://example.org/tourism.owl#Metrics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/tourism.owl#expectedTime -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/tourism.owl#expectedTime">
+        <rdfs:domain rdf:resource="http://example.org/tourism.owl#Metrics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/tourism.owl#grade -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/tourism.owl#grade">
+        <rdfs:domain rdf:resource="http://example.org/tourism.owl#Metrics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/tourism.owl#gridReference -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/tourism.owl#gridReference">
+        <rdfs:domain rdf:resource="http://example.org/tourism.owl#Point"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://example.org/tourism.owl#latitude -->
 
 
     <owl:DatatypeProperty rdf:about="http://example.org/tourism.owl#latitude">
         <rdfs:domain rdf:resource="http://example.org/tourism.owl#GeoLocation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/tourism.owl#length -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/tourism.owl#length">
+        <rdfs:domain rdf:resource="http://example.org/tourism.owl#Metrics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
@@ -195,12 +286,72 @@ above the local reference ellipsoid).</rdfs:comment>
     
 
 
+    <!-- http://example.org/tourism.owl#nearestTown -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/tourism.owl#nearestTown">
+        <rdfs:domain rdf:resource="http://example.org/tourism.owl#Point"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/tourism.owl#pointName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/tourism.owl#pointName">
+        <rdfs:domain rdf:resource="http://example.org/tourism.owl#Point"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://example.org/tourism.owl#telephone -->
 
 
     <owl:DatatypeProperty rdf:about="http://example.org/tourism.owl#telephone">
         <rdfs:domain rdf:resource="http://example.org/tourism.owl#Place"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/tourism.owl#trailFormat -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/tourism.owl#trailFormat">
+        <rdfs:domain rdf:resource="http://example.org/tourism.owl#Trail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/tourism.owl#trailName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/tourism.owl#trailName">
+        <rdfs:domain rdf:resource="http://example.org/tourism.owl#Trail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/tourism.owl#trailOrganization -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/tourism.owl#trailOrganization">
+        <rdfs:domain rdf:resource="http://example.org/tourism.owl#Trail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/tourism.owl#trailType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/tourism.owl#trailType">
+        <rdfs:domain rdf:resource="http://example.org/tourism.owl#Trail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -268,6 +419,15 @@ above the local reference ellipsoid).</rdfs:comment>
     
 
 
+    <!-- http://example.org/tourism.owl#FinishPoint -->
+
+
+    <owl:Class rdf:about="http://example.org/tourism.owl#FinishPoint">
+        <rdfs:subClassOf rdf:resource="http://example.org/tourism.owl#Point"/>
+    </owl:Class>
+    
+
+
     <!-- http://example.org/tourism.owl#GeoLocation -->
 
 
@@ -277,10 +437,42 @@ above the local reference ellipsoid).</rdfs:comment>
     
 
 
+    <!-- http://example.org/tourism.owl#Metrics -->
+
+
+    <owl:Class rdf:about="http://example.org/tourism.owl#Metrics"/>
+    
+
+
     <!-- http://example.org/tourism.owl#Place -->
 
 
     <owl:Class rdf:about="http://example.org/tourism.owl#Place"/>
+    
+
+
+    <!-- http://example.org/tourism.owl#Point -->
+
+
+    <owl:Class rdf:about="http://example.org/tourism.owl#Point">
+        <rdfs:subClassOf rdf:resource="http://example.org/tourism.owl#GeoLocation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/tourism.owl#StartPoint -->
+
+
+    <owl:Class rdf:about="http://example.org/tourism.owl#StartPoint">
+        <rdfs:subClassOf rdf:resource="http://example.org/tourism.owl#Point"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/tourism.owl#Trail -->
+
+
+    <owl:Class rdf:about="http://example.org/tourism.owl#Trail"/>
     
 
 

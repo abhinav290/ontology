@@ -1,5 +1,12 @@
 {
   "@context" : {
+    "FinishPoint" : {
+      "@id" : "http://example.org/tourism.owl#FinishPoint"
+    },
+    "trailOrganization" : {
+      "@id" : "http://example.org/tourism.owl#trailOrganization",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "url" : {
       "@id" : "http://example.org/tourism.owl#url",
       "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
@@ -7,8 +14,16 @@
     "Country" : {
       "@id" : "http://example.org/tourism.owl#Country"
     },
+    "trailCity" : {
+      "@id" : "http://example.org/tourism.owl#trailCity",
+      "@type" : "@id"
+    },
     "Attraction" : {
       "@id" : "http://example.org/tourism.owl#Attraction"
+    },
+    "grade" : {
+      "@id" : "http://example.org/tourism.owl#grade",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "long" : {
       "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#long"
@@ -16,15 +31,35 @@
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
+    "expectedTime" : {
+      "@id" : "http://example.org/tourism.owl#expectedTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "nearestTown" : {
+      "@id" : "http://example.org/tourism.owl#nearestTown",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "longitude" : {
       "@id" : "http://example.org/tourism.owl#longitude",
       "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "trailName" : {
+      "@id" : "http://example.org/tourism.owl#trailName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "startPoint" : {
+      "@id" : "http://example.org/tourism.owl#startPoint",
+      "@type" : "@id"
     },
     "GeoLocation" : {
       "@id" : "http://example.org/tourism.owl#GeoLocation"
     },
     "based_near" : {
       "@id" : "http://xmlns.com/foaf/0.1/based_near"
+    },
+    "finishPoint" : {
+      "@id" : "http://example.org/tourism.owl#finishPoint",
+      "@type" : "@id"
     },
     "latitude" : {
       "@id" : "http://example.org/tourism.owl#latitude",
@@ -34,9 +69,17 @@
       "@id" : "http://example.org/tourism.owl#name",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
     "location" : {
       "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#location",
       "@type" : "@id"
+    },
+    "climb" : {
+      "@id" : "http://example.org/tourism.owl#climb",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "alt" : {
       "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#alt"
@@ -48,12 +91,23 @@
       "@id" : "http://example.org/tourism.owl#inCountry",
       "@type" : "@id"
     },
+    "trailType" : {
+      "@id" : "http://example.org/tourism.owl#trailType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "telephone" : {
       "@id" : "http://example.org/tourism.owl#telephone",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "Place" : {
       "@id" : "http://example.org/tourism.owl#Place"
+    },
+    "Point" : {
+      "@id" : "http://example.org/tourism.owl#Point"
+    },
+    "length" : {
+      "@id" : "http://example.org/tourism.owl#length",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
     },
     "title" : {
       "@id" : "http://purl.org/dc/elements/1.1/title"
@@ -64,6 +118,14 @@
     },
     "lat" : {
       "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+    },
+    "gridReference" : {
+      "@id" : "http://example.org/tourism.owl#gridReference",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "pointName" : {
+      "@id" : "http://example.org/tourism.owl#pointName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "Accomodation" : {
       "@id" : "http://example.org/tourism.owl#Accomodation"
@@ -78,14 +140,31 @@
     "City" : {
       "@id" : "http://example.org/tourism.owl#City"
     },
+    "Trail" : {
+      "@id" : "http://example.org/tourism.owl#Trail"
+    },
     "SpatialThing" : {
       "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+    },
+    "StartPoint" : {
+      "@id" : "http://example.org/tourism.owl#StartPoint"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
+    "trailMetrics" : {
+      "@id" : "http://example.org/tourism.owl#trailMetrics",
+      "@type" : "@id"
+    },
     "description" : {
       "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "trailFormat" : {
+      "@id" : "http://example.org/tourism.owl#trailFormat",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Metrics" : {
+      "@id" : "http://example.org/tourism.owl#Metrics"
     }
   }
 }
