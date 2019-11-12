@@ -26,29 +26,31 @@
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#alt
-<http://www.w3.org/2003/01/geo/wgs84_pos#alt> rdfs:comment """The WGS84 altitude of a SpatialThing (decimal meters 
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt> rdf:type owl:AnnotationProperty ;
+                                              rdfs:comment """The WGS84 altitude of a SpatialThing (decimal meters 
 above the local reference ellipsoid).""" ;
                                               rdfs:label "altitude" ;
-                                              rdf:type owl:AnnotationProperty ;
                                               rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
-<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdfs:comment "The WGS84 latitude of a SpatialThing (decimal degrees)." ;
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:AnnotationProperty ;
+                                              rdfs:comment "The WGS84 latitude of a SpatialThing (decimal degrees)." ;
                                               rdfs:label "latitude" ;
-                                              rdf:type owl:AnnotationProperty ;
                                               rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#location
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> rdf:type owl:AnnotationProperty ;
-                                                   rdfs:subPropertyOf <http://xmlns.com/foaf/0.1/based_near> .
+                                                   rdfs:subPropertyOf <http://xmlns.com/foaf/0.1/based_near> ;
+                                                   rdfs:range :GeoLocation ,
+                                                              <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#long
-<http://www.w3.org/2003/01/geo/wgs84_pos#long> rdfs:comment "The WGS84 longitude of a SpatialThing (decimal degrees)." ;
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> rdf:type owl:AnnotationProperty ;
+                                               rdfs:comment "The WGS84 longitude of a SpatialThing (decimal degrees)." ;
                                                rdfs:label "longitude" ;
-                                               rdf:type owl:AnnotationProperty ;
                                                rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
 
 
@@ -59,6 +61,13 @@ above the local reference ellipsoid).""" ;
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://example.org/tourism.owl#finishPoint
+:finishPoint rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain :Trail ;
+             rdfs:range :FinishPoint .
+
 
 ###  http://example.org/tourism.owl#hasCity
 :hasCity rdf:type owl:ObjectProperty ,
@@ -82,21 +91,68 @@ above the local reference ellipsoid).""" ;
            rdfs:range :Country .
 
 
+###  http://example.org/tourism.owl#startPoint
+:startPoint rdf:type owl:ObjectProperty ;
+            rdfs:domain :Trail ;
+            rdfs:range :StartPoint .
+
+
+###  http://example.org/tourism.owl#trailCity
+:trailCity rdf:type owl:ObjectProperty ;
+           rdfs:domain :Trail ;
+           rdfs:range :City .
+
+
+###  http://example.org/tourism.owl#trailMetrics
+:trailMetrics rdf:type owl:ObjectProperty ;
+              rdfs:domain :Trail ;
+              rdfs:range :Metrics .
+
+
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#location
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> rdf:type owl:ObjectProperty ;
                                                    rdfs:domain :Place ;
-                                                   rdfs:range :GeoLocation ,
-                                                              <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+                                                   rdfs:range :GeoLocation .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
+###  http://example.org/tourism.owl#climb
+:climb rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Metrics ;
+       rdfs:range xsd:string .
+
+
+###  http://example.org/tourism.owl#expectedTime
+:expectedTime rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Metrics ;
+              rdfs:range xsd:int .
+
+
+###  http://example.org/tourism.owl#grade
+:grade rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Metrics ;
+       rdfs:range xsd:string .
+
+
+###  http://example.org/tourism.owl#gridReference
+:gridReference rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Point ;
+               rdfs:range xsd:string .
+
+
 ###  http://example.org/tourism.owl#latitude
 :latitude rdf:type owl:DatatypeProperty ;
           rdfs:domain :GeoLocation ;
           rdfs:range xsd:double .
+
+
+###  http://example.org/tourism.owl#length
+:length rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Metrics ;
+        rdfs:range xsd:float .
 
 
 ###  http://example.org/tourism.owl#longitude
@@ -111,10 +167,46 @@ above the local reference ellipsoid).""" ;
       rdfs:range xsd:string .
 
 
+###  http://example.org/tourism.owl#nearestTown
+:nearestTown rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Point ;
+             rdfs:range xsd:string .
+
+
+###  http://example.org/tourism.owl#pointName
+:pointName rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Point ;
+           rdfs:range xsd:string .
+
+
 ###  http://example.org/tourism.owl#telephone
 :telephone rdf:type owl:DatatypeProperty ;
            rdfs:domain :Place ;
            rdfs:range rdfs:Literal .
+
+
+###  http://example.org/tourism.owl#trailFormat
+:trailFormat rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Trail ;
+             rdfs:range xsd:string .
+
+
+###  http://example.org/tourism.owl#trailName
+:trailName rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Trail ;
+           rdfs:range xsd:string .
+
+
+###  http://example.org/tourism.owl#trailOrganization
+:trailOrganization rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Trail ;
+                   rdfs:range xsd:string .
+
+
+###  http://example.org/tourism.owl#trailType
+:trailType rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Trail ;
+           rdfs:range xsd:string .
 
 
 ###  http://example.org/tourism.owl#url
@@ -150,13 +242,36 @@ above the local reference ellipsoid).""" ;
 :Country rdf:type owl:Class .
 
 
+###  http://example.org/tourism.owl#FinishPoint
+:FinishPoint rdf:type owl:Class ;
+             rdfs:subClassOf :Point .
+
+
 ###  http://example.org/tourism.owl#GeoLocation
 :GeoLocation rdf:type owl:Class ;
              rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
 
 
+###  http://example.org/tourism.owl#Metrics
+:Metrics rdf:type owl:Class .
+
+
 ###  http://example.org/tourism.owl#Place
 :Place rdf:type owl:Class .
+
+
+###  http://example.org/tourism.owl#Point
+:Point rdf:type owl:Class ;
+       rdfs:subClassOf :GeoLocation .
+
+
+###  http://example.org/tourism.owl#StartPoint
+:StartPoint rdf:type owl:Class ;
+            rdfs:subClassOf :Point .
+
+
+###  http://example.org/tourism.owl#Trail
+:Trail rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
